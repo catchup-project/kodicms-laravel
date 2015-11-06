@@ -4,7 +4,7 @@ namespace KodiCMS\SleepingOwlAdmin\ColumnFilters;
 
 use Exception;
 use Carbon\Carbon;
-use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder;
 use KodiCMS\SleepingOwlAdmin\Interfaces\RepositoryInterface;
 use KodiCMS\SleepingOwlAdmin\Interfaces\NamedColumnInterface;
 

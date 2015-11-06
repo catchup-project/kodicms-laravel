@@ -2,10 +2,10 @@
 
 namespace KodiCMS\SleepingOwlAdmin\Form;
 
-use Illuminate\Database\Eloquent\Model;
 use URL;
 use Input;
 use Validator;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Support\Renderable;
 use KodiCMS\SleepingOwlAdmin\Interfaces\FormInterface;
 use KodiCMS\SleepingOwlAdmin\Model\ModelConfiguration;

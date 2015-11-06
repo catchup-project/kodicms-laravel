@@ -1,43 +1,47 @@
 <?php
 
-Route::group(['middleware' => config('sleeping_owl.middleware'), 'prefix' => backend_url_segment().'/soa'], function () {
+Route::group([
+    'middleware' => config('sleeping_owl.middleware'),
+    'prefix' => backend_url_segment().'/sleepingowl',
+    'as' => 'admin.',
+], function () {
     Route::get('{adminModel}', [
-        'as'   => 'admin.model',
+        'as'   => 'model',
         'uses' => 'AdminController@getDisplay',
     ]);
 
     Route::get('{adminModel}/create', [
-        'as'   => 'admin.model.create',
+        'as'   => 'model.create',
         'uses' => 'AdminController@getCreate',
     ]);
 
     Route::post('{adminModel}', [
-        'as'   => 'admin.model.store',
+        'as'   => 'model.store',
         'uses' => 'AdminController@postStore',
     ]);
 
     Route::get('{adminModel}/{adminModelId}/edit', [
-        'as'   => 'admin.model.edit',
+        'as'   => 'model.edit',
         'uses' => 'AdminController@getEdit',
     ]);
 
     Route::post('{adminModel}/{adminModelId}', [
-        'as'   => 'admin.model.update',
+        'as'   => 'model.update',
         'uses' => 'AdminController@postUpdate',
     ]);
 
     Route::delete('{adminModel}/{adminModelId}', [
-        'as'   => 'admin.model.destroy',
+        'as'   => 'model.destroy',
         'uses' => 'AdminController@postDestroy',
     ]);
 
     Route::post('{adminModel}/{adminModelId}/restore', [
-        'as'   => 'admin.model.restore',
+        'as'   => 'model.restore',
         'uses' => 'AdminController@postRestore',
     ]);
 
     Route::get('{adminWildcard}', [
-        'as'   => 'admin.wildcard',
+        'as'   => 'wildcard',
         'uses' => 'AdminController@getWildcard',
     ]);
 });

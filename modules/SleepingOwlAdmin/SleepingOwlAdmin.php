@@ -2,6 +2,7 @@
 
 namespace KodiCMS\SleepingOwlAdmin;
 
+use Closure;
 use KodiCMS\CMS\Navigation\Section;
 use Illuminate\Contracts\Support\Renderable;
 use KodiCMS\SleepingOwlAdmin\Model\ModelConfiguration;
@@ -38,19 +39,32 @@ class SleepingOwlAdmin
 
     /**
      * @param string $class
+     * @param Closure|null $callback
      *
+     * @return $this
+     */
+    public function registerModel($class, Closure $callback = null)
+    {
+        $model = new ModelConfiguration($class);
+        $this->setModel($class, $model);
+        if (is_callable($callback)) {
+            call_user_func($callback, $model);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $class
      * @return ModelConfiguration
      */
     public function getModel($class)
     {
-        if ($this->hasModel($class)) {
-            return $this->models[$class];
+        if (! $this->hasModel($class)) {
+            $this->registerModel($class);
         }
 
-        $model = new ModelConfiguration($class);
-        $this->setModel($class, $model);
-
-        return $model;
+        return array_get($this->models, $class);
     }
 
     /**

@@ -324,7 +324,7 @@ class DisplayTable implements Renderable, DisplayInterface
     public function getActions()
     {
         foreach ($this->actions as $action) {
-            $action->setUrl($this->getModel()->displayUrl([
+            $action->setUrl($this->getModel()->getDeleteUrl([
                 '_action' => $action->name(),
                 '_ids'    => '',
             ]));

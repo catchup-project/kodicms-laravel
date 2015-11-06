@@ -2,9 +2,9 @@
 
 namespace KodiCMS\SleepingOwlAdmin\ColumnFilters;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use KodiCMS\SleepingOwlAdmin\Interfaces\NamedColumnInterface;
 use KodiCMS\SleepingOwlAdmin\Interfaces\RepositoryInterface;
 use KodiCMS\SleepingOwlAdmin\Repository\BaseRepository;

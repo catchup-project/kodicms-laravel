@@ -2,9 +2,9 @@
 
 namespace KodiCMS\SleepingOwlAdmin\ColumnFilters;
 
-use Illuminate\Database\Query\Builder;
-use KodiCMS\SleepingOwlAdmin\Interfaces\NamedColumnInterface;
+use Illuminate\Database\Eloquent\Builder;
 use KodiCMS\SleepingOwlAdmin\Interfaces\RepositoryInterface;
+use KodiCMS\SleepingOwlAdmin\Interfaces\NamedColumnInterface;
 
 class Text extends BaseColumnFilter
 {

@@ -238,7 +238,7 @@ class ModelConfiguration
         if (! is_callable($this->display)) {
             return;
         }
-        $display = call_user_func($this->display);
+        $display = app()->call($this->display);
         if ($display instanceof DisplayInterface) {
             $display->setClass($this->getClass());
             $display->initialize();
@@ -255,7 +255,7 @@ class ModelConfiguration
         if (! is_callable($this->create)) {
             return;
         }
-        $create = call_user_func($this->create);
+        $create = app()->call($this->create);
         if ($create instanceof DisplayInterface) {
             $create->setClass($this->getClass());
             $create->initialize();
@@ -277,7 +277,7 @@ class ModelConfiguration
         if (! is_callable($this->edit)) {
             return;
         }
-        $edit = call_user_func($this->edit, $id);
+        $edit = app()->call($this->edit, [$id]);
         if ($edit instanceof DisplayInterface) {
             $edit->setClass($this->getClass());
             $edit->initialize();
@@ -310,7 +310,7 @@ class ModelConfiguration
     public function fireDelete($id)
     {
         if (is_callable($this->delete)) {
-            return call_user_func($this->delete, $id);
+            return app()->call($this->delete, [$id]);
         }
     }
 
@@ -322,7 +322,7 @@ class ModelConfiguration
     public function fireRestore($id)
     {
         if (is_callable($this->restore)) {
-            return call_user_func($this->restore, $id);
+            return app()->call($this->restore, [$id]);
         }
 
         return $this->restore;

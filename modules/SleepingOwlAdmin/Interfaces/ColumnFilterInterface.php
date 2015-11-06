@@ -2,7 +2,7 @@
 
 namespace KodiCMS\SleepingOwlAdmin\Interfaces;
 
-use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder;
 
 interface ColumnFilterInterface
 {

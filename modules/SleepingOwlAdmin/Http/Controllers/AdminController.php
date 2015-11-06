@@ -13,14 +13,6 @@ use KodiCMS\CMS\Http\Controllers\System\BackendController;
 // TODO: добавить заголовки для различных действий
 class AdminController extends BackendController
 {
-    public function before()
-    {
-        parent::before();
-
-        // TODO: изменить порядок
-        $this->breadcrumbs->add(config('sleeping_owl.title'), false, true);
-    }
-
     /**
      * @param ModelConfiguration $model
      *
@@ -28,7 +20,7 @@ class AdminController extends BackendController
      */
     public function getDisplay(ModelConfiguration $model)
     {
-        return $this->render($model->getTitle(), $model->fireDisplay());
+        return $this->render($model, $model->fireDisplay());
     }
 
     /**
@@ -43,7 +35,7 @@ class AdminController extends BackendController
             abort(404);
         }
 
-        return $this->render($model->getTitle(), $create);
+        return $this->render($model, $create);
     }
 
     /**
@@ -82,7 +74,7 @@ class AdminController extends BackendController
             abort(404);
         }
 
-        return $this->render($model->getTitle(), $edit);
+        return $this->render($model, $edit);
     }
 
     /**
@@ -144,18 +136,19 @@ class AdminController extends BackendController
     }
 
     /**
-     * @param string            $title
-     * @param Renderable|string $content
+     * @param ModelConfiguration $model
+     * @param Renderable|string  $content
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function render($title, $content)
+    public function render(ModelConfiguration $model, $content)
     {
         if ($content instanceof Renderable) {
             $content = $content->render();
         }
 
-        $this->setTitle($title);
+        $this->breadcrumbs->add(config('sleeping_owl.title'), null, true);
+        $this->setTitle($model->getTitle(), $model->getDisplayUrl());
 
         $this->template->with('content', $content);
     }

@@ -16,6 +16,8 @@ use KodiCMS\SleepingOwlAdmin\AliasBinder;
  * @method static \KodiCMS\SleepingOwlAdmin\Columns\Column\Lists lists($name)
  * @method static \KodiCMS\SleepingOwlAdmin\Columns\Column\Order order()
  * @method static \KodiCMS\SleepingOwlAdmin\Columns\Column\String string($name)
+ * @method static \KodiCMS\SleepingOwlAdmin\Columns\Column\Link link($name)
+ * @method static \KodiCMS\SleepingOwlAdmin\Columns\Column\Email email($name)
  * @method static \KodiCMS\SleepingOwlAdmin\Columns\Column\TreeControl treeControl()
  * @method static \KodiCMS\SleepingOwlAdmin\Columns\Column\Url url($name)
  */

@@ -39,7 +39,7 @@ class Columns extends BaseFormItem
      *
      * @return $this
      */
-    public function setColumns($columns)
+    public function setColumns(array $columns)
     {
         $this->columns = $columns;
 

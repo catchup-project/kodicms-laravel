@@ -5,10 +5,32 @@ namespace KodiCMS\SleepingOwlAdmin\Filter;
 use Input;
 use Closure;
 use Illuminate\Database\Eloquent\Builder;
+use KodiCMS\SleepingOwlAdmin\Exceptions\FilterOperatorException;
 use KodiCMS\SleepingOwlAdmin\Interfaces\FilterInterface;
 
 abstract class FilterBase implements FilterInterface
 {
+    const EQUAL = 'equal';
+    const NOT_EQUAL = 'not_equal';
+    const LESS = 'less';
+    const LESS_OR_EQUAL = 'less_or_equal';
+    const GREATER = 'greater';
+    const GREATER_OR_EQUAL = 'greater_or_equal';
+    const BEGINS_WITH = 'begins_with';
+    const NOT_BEGINS_WITH = 'not_begins_with';
+    const CONTAINS = 'contains';
+    const NOT_CONTAINS = 'not_contains';
+    const ENDS_WITH = 'ends_with';
+    const NOT_ENDS_WITH = 'not_ends_with';
+    const IS_EMPTY = 'is_empty';
+    const IS_NOT_EMPTY = 'is_not_empty';
+    const IS_NULL = 'is_null';
+    const IS_NOT_NULL = 'is_not_null';
+    const BETWEEN = 'between';
+    const NOT_BETWEEN = 'not_between';
+    const IN = 'in';
+    const NOT_IN = 'not_in';
+
     /**
      * @var string
      */
@@ -35,7 +57,6 @@ abstract class FilterBase implements FilterInterface
     protected $operator = 'equal';
 
     /**
-     * TODO: доюавить константы для операторов.
      * @var array
      */
     protected $sqlOperators = [
@@ -70,14 +91,11 @@ abstract class FilterBase implements FilterInterface
         $this->setAlias($name);
     }
 
+    /**
+     * Initialize filter.
+     */
     public function initialize()
     {
-        $parameters = Input::all();
-        $value = $this->getValue();
-        if (is_null($value)) {
-            $value = array_get($parameters, $this->getAlias());
-        }
-        $this->setValue($value);
     }
 
     /**
@@ -156,19 +174,50 @@ abstract class FilterBase implements FilterInterface
      * @param string $operator
      *
      * @return $this
+     * @throws FilterOperatorException
      */
     public function setOperator($operator)
     {
+        if (! array_key_exists($operator, $this->sqlOperators)) {
+            throw new FilterOperatorException("Operator [$operator] not found");
+        }
+
         $this->operator = $operator;
 
         return $this;
     }
 
     /**
+     * @param null $default
+     *
      * @return mixed
      */
-    public function getValue()
+    public function getValue($default = null)
     {
+        if (is_null($this->value)) {
+            $this->value = Input::get($this->getAlias(), $default);
+        }
+        $params = $this->getOperatorParams();
+        $method = $params['method'];
+        switch ($method) {
+            case 'where':
+            case 'whereNull':
+            case 'whereNotNull':
+                break;
+            case 'whereBetween':
+            case 'whereNotBetween':
+                if (! is_array($this->value)) {
+                    $this->value = explode(',', $this->value, 2);
+                }
+                break;
+            case 'whereIn':
+            case 'whereNotIn':
+                if (! is_array($this->value)) {
+                    $this->value = explode(',', $this->value);
+                }
+                break;
+        }
+
         return $this->value;
     }
 
@@ -197,7 +246,7 @@ abstract class FilterBase implements FilterInterface
      */
     public function apply(Builder $query)
     {
-        $params = array_get($this->sqlOperators, $this->getOperator(), ['method' => 'where', 'op' => '=']);
+        $params = $this->getOperatorParams();
         $method = $params['method'];
         switch ($method) {
             case 'where':
@@ -217,5 +266,13 @@ abstract class FilterBase implements FilterInterface
                 $query->$method($this->getName(), (array) $this->getValue());
                 break;
         }
+    }
+
+    /**
+     * @return array
+     */
+    protected function getOperatorParams()
+    {
+        return array_get($this->sqlOperators, $this->getOperator(), ['method' => 'where', 'op' => '=']);
     }
 }

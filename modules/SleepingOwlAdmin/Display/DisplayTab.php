@@ -8,6 +8,7 @@ use KodiCMS\SleepingOwlAdmin\Interfaces\FormInterface;
 use KodiCMS\SleepingOwlAdmin\Model\ModelConfiguration;
 use KodiCMS\SleepingOwlAdmin\Interfaces\DisplayInterface;
 
+// TODO: починить указание активности таба
 class DisplayTab implements Renderable, DisplayInterface, FormInterface
 {
     /**
@@ -24,6 +25,11 @@ class DisplayTab implements Renderable, DisplayInterface, FormInterface
      * @var string
      */
     protected $name;
+
+    /**
+     * @var string
+     */
+    protected $icon;
 
     /**
      * @var DisplayInterface
@@ -94,6 +100,26 @@ class DisplayTab implements Renderable, DisplayInterface, FormInterface
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIcon()
+    {
+        return $this->icon;
+    }
+
+    /**
+     * @param string $icon
+     *
+     * @return $this
+     */
+    public function setIcon($icon)
+    {
+        $this->icon = $icon;
 
         return $this;
     }
@@ -208,15 +234,6 @@ class DisplayTab implements Renderable, DisplayInterface, FormInterface
      * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
      */
     public function render()
-    {
-        return app('sleeping_owl.template')->view('display.tab', $this->getParams());
-    }
-
-    /**
-     * Render tab content.
-     * @return \Illuminate\View\View|\Illuminate\Contracts\View\Factory
-     */
-    public function renderContent()
     {
         return app('sleeping_owl.template')->view('display.tab_content', [
             'active'  => $this->isActive(),

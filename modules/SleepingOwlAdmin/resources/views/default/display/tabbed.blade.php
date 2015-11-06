@@ -1,12 +1,10 @@
-<div role="tabpanel">
-	<ul class="nav nav-tabs" role="tablist">
-		@foreach ($tabs as $tab)
-			{!! $tab !!}
-		@endforeach
-	</ul>
-	<div class="tab-content">
-		@foreach ($tabs as $tab)
-			{!! $tab->content() !!}
-		@endforeach
-	</div>
+<div class="panel tabbable">
+    @foreach ($tabs as $tab)
+    <div class="panel-heading" data-icon="{{ $tab->getIcon() }}">
+        <span class="panel-title">{!! $tab->getLabel() !!}</span>
+    </div>
+    <div class="panel-body">
+        {!! $tab->getContent() !!}
+    </div>
+    @endforeach
 </div>

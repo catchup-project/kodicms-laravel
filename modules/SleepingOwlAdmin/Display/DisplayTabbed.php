@@ -54,11 +54,32 @@ class DisplayTabbed implements Renderable, DisplayInterface, FormInterface
     public function setTabs($tabs)
     {
         if (is_callable($tabs)) {
-            $tabs = call_user_func($tabs);
+            $tabs = call_user_func($tabs, $this);
         }
-        $this->tabs = $tabs;
+
+        if (is_array($tabs)) {
+            $this->tabs = $tabs;
+        }
 
         return $this;
+    }
+
+    /**
+     * @param DisplayInterface $display
+     * @param string           $label
+     * @param bool|false       $active
+     *
+     * @return $this
+     */
+    public function appendDisplay(DisplayInterface $display, $label, $active = false)
+    {
+        $tab = \SleepingOwlDisplay::tab($display)
+            ->setLabel($label)
+            ->setActive($active);
+
+        $this->tabs[] = $tab;
+
+        return $tab;
     }
 
     /**

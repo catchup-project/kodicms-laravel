@@ -20,6 +20,7 @@ class ColumnServiceProvider extends ServiceProvider
         Column::register('lists', \KodiCMS\SleepingOwlAdmin\Columns\Column\Lists::class);
         Column::register('order', \KodiCMS\SleepingOwlAdmin\Columns\Column\Order::class);
         Column::register('string', \KodiCMS\SleepingOwlAdmin\Columns\Column\String::class);
+        Column::register('link', \KodiCMS\SleepingOwlAdmin\Columns\Column\Link::class);
         Column::register('email', \KodiCMS\SleepingOwlAdmin\Columns\Column\Email::class);
         Column::register('treeControl', \KodiCMS\SleepingOwlAdmin\Columns\Column\TreeControl::class);
         Column::register('url', \KodiCMS\SleepingOwlAdmin\Columns\Column\Url::class);
