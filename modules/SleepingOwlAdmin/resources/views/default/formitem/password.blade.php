@@ -1,5 +1,17 @@
 <div class="form-group {{ $errors->has($name) ? 'has-error' : '' }}">
-	<label for="{{ $name }}">{{ $label }}</label>
-	<input class="form-control" name="{{ $name }}" type="password" id="{{ $name }}" value="" @if(isset($readonly))readonly="{{ $readonly }}"@endif>
-	@include(app('sleeping_owl.template')->getTemplateViewPath('formitem.errors'))
+    <label for="{{ $name }}" class="control-label col-md-3">{{ $label }}</label>
+
+    <div class="col-md-9">
+        {!! Form::password($name, [
+            'class' => 'form-control',
+            'id' => $name,
+            isset($readonly) ? 'readonly' : ''
+        ]) !!}
+
+        @if(!empty($helpText))
+            <span class="help-block">{!! $helpText !!}</span>
+        @endif
+
+        @include(app('sleeping_owl.template')->getTemplateViewPath('formitem.errors'))
+    </div>
 </div>

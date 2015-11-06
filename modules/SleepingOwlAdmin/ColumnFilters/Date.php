@@ -54,10 +54,14 @@ class Date extends Text
 
     /**
      * @param string $format
+     *
+     * @return $this
      */
     public function setFormat($format)
     {
         $this->format = $format;
+
+        return $this;
     }
 
     /**
@@ -70,10 +74,14 @@ class Date extends Text
 
     /**
      * @param bool $seconds
+     *
+     * @return $this
      */
     public function setSeconds($seconds)
     {
         $this->seconds = (bool) $seconds;
+
+        return $this;
     }
 
     /**
@@ -90,10 +98,14 @@ class Date extends Text
 
     /**
      * @param string $pickerFormat
+     *
+     * @return $this
      */
     public function setPickerFormat($pickerFormat)
     {
         $this->pickerFormat = $pickerFormat;
+
+        return $this;
     }
 
     /**
@@ -106,6 +118,8 @@ class Date extends Text
 
     /**
      * @param int $width
+     *
+     * @return $this
      */
     public function setWidth($width)
     {
@@ -114,6 +128,8 @@ class Date extends Text
             $width = 0;
         }
         $this->width = (int) $width;
+
+        return $this;
     }
 
     /**
@@ -126,10 +142,14 @@ class Date extends Text
 
     /**
      * @param string $searchFormat
+     *
+     * @return $this
      */
     public function setSearchFormat($searchFormat)
     {
         $this->searchFormat = $searchFormat;
+
+        return $this;
     }
 
     /**

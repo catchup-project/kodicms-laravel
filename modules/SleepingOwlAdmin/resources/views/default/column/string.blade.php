@@ -1,1 +1,1 @@
-<td>{{ $value }} {!! $append !!}</td>
+<td class="row-string">{{ $value }} {!! $append !!}</td>

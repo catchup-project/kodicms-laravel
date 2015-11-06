@@ -1,1 +1,1 @@
-<td data-order="{{ $originalValue }}">{{ $value }} {!! $append !!}</td>
+<td data-order="{{ $originalValue }}" class="row-datetime">{{ $value }} {!! $append !!}</td>

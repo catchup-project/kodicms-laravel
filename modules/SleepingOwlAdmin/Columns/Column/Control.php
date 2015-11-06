@@ -11,8 +11,10 @@ class Control extends BaseColumn
     protected $view = 'control';
 
     /**
-     *
+     * @var
      */
+    protected $width = '50px';
+
     public function __construct()
     {
         parent::__construct();

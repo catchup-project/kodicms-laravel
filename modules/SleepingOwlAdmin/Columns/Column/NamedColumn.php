@@ -69,7 +69,7 @@ abstract class NamedColumn extends BaseColumn implements NamedColumnInterface
             $instance = $instance->{$part};
         }
         if (! empty($parts) && ! is_null($instance)) {
-            return $this->getValue($instance, implode('.', $parts));
+            return $this->getValueFromObject($instance, implode('.', $parts));
         }
 
         return $instance;

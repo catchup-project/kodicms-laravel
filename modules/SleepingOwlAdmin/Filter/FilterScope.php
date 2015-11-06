@@ -2,7 +2,7 @@
 
 namespace KodiCMS\SleepingOwlAdmin\Filter;
 
-use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder;
 
 class FilterScope extends FilterField
 {

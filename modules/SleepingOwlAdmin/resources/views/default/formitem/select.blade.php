@@ -1,14 +1,18 @@
+<?php // TODO: доработать ?>
 <div class="form-group {{ $errors->has($name) ? 'has-error' : '' }}">
-	<label for="{{ $name }}">{{ $label }}</label>
-	<div>
-		<select id="{{ $name }}" name="{{ $name }}" class="form-control multiselect" size="2" data-select-type="single" {!! ($nullable) ? 'data-nullable="true"' : '' !!}>
-			@if ($nullable)
-				<option value=""></option>
-			@endif
-			@foreach ($options as $optionValue => $optionLabel)
-				<option value="{{ $optionValue }}" {!! ($value == $optionValue) ? 'selected="selected"' : '' !!}>{{ $optionLabel }}</option>
-			@endforeach
-		</select>
-	</div>
-	@include(app('sleeping_owl.template')->getTemplateViewPath('formitem.errors'))
+    <label for="{{ $name }}" class="control-label col-md-3">{{ $label }}</label>
+
+    <div class="col-md-9">
+        {!! Form::select($name, $options, $value, [
+            'class' => 'form-control',
+            'id' => $name,
+            isset($readonly) ? 'readonly' : ''
+        ]) !!}
+
+        @if(!empty($helpText))
+            <span class="help-block">{!! $helpText !!}</span>
+        @endif
+
+        @include(app('sleeping_owl.template')->getTemplateViewPath('formitem.errors'))
+    </div>
 </div>

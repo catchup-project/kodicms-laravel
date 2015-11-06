@@ -28,6 +28,11 @@ abstract class BaseColumn implements Renderable, ColumnInterface
      */
     protected $append;
 
+    /**
+     * @var
+     */
+    protected $width = null;
+
     public function __construct()
     {
         $this->header = new ColumnHeader;
@@ -47,6 +52,26 @@ abstract class BaseColumn implements Renderable, ColumnInterface
     public function getHeader()
     {
         return $this->header;
+    }
+
+    /**
+     * @return int
+     */
+    public function getWidth()
+    {
+        return $this->width;
+    }
+
+    /**
+     * @param string $width
+     *
+     * @return $this
+     */
+    public function setWidth($width)
+    {
+        $this->width = $width;
+
+        return $this;
     }
 
     /**

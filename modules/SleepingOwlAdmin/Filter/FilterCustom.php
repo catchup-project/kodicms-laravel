@@ -3,7 +3,7 @@
 namespace KodiCMS\SleepingOwlAdmin\Filter;
 
 use Closure;
-use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder;
 
 class FilterCustom extends FilterField
 {

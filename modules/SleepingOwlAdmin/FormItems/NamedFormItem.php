@@ -27,6 +27,11 @@ abstract class NamedFormItem extends BaseFormItem
     protected $label;
 
     /**
+     * @var string
+     */
+    protected $helpText;
+
+    /**
      * @var mixed
      */
     protected $defaultValue;
@@ -155,6 +160,26 @@ abstract class NamedFormItem extends BaseFormItem
     }
 
     /**
+     * @return string
+     */
+    public function getHelpText()
+    {
+        return $this->helpText;
+    }
+
+    /**
+     * @param string $helpText
+     *
+     * @return $this
+     */
+    public function setHelpText($helpText)
+    {
+        $this->helpText = $helpText;
+
+        return $this;
+    }
+
+    /**
      * @return bool
      */
     public function isReadonly()
@@ -215,6 +240,26 @@ abstract class NamedFormItem extends BaseFormItem
     }
 
     /**
+     * @return $this
+     */
+    public function required()
+    {
+        $this->addValidationRule('required');
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function unique()
+    {
+        $this->addValidationRule('_unique');
+
+        return $this;
+    }
+
+    /**
      * @return array
      */
     public function getParams()
@@ -224,6 +269,7 @@ abstract class NamedFormItem extends BaseFormItem
             'label'    => $this->getLabel(),
             'readonly' => $this->isReadonly(),
             'value'    => $this->getValue(),
+            'helpText' => $this->getHelpText(),
         ];
     }
 
@@ -236,15 +282,5 @@ abstract class NamedFormItem extends BaseFormItem
             $value = $this->getValue();
         }
         $this->getModel()->$attribute = $value;
-    }
-
-    public function required()
-    {
-        $this->addValidationRule('required');
-    }
-
-    public function unique()
-    {
-        $this->addValidationRule('_unique');
     }
 }

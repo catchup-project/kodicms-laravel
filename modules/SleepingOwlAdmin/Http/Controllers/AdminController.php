@@ -10,6 +10,7 @@ use KodiCMS\SleepingOwlAdmin\Interfaces\FormInterface;
 use KodiCMS\SleepingOwlAdmin\Model\ModelConfiguration;
 use KodiCMS\CMS\Http\Controllers\System\BackendController;
 
+// TODO: добавить заголовки для различных действий
 class AdminController extends BackendController
 {
     public function before()

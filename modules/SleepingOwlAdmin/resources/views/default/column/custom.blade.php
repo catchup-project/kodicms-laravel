@@ -1,1 +1,1 @@
-<td>{!! $value !!} {!! $append !!}</td>
+<td class="row-custom">{!! $value !!} {!! $append !!}</td>

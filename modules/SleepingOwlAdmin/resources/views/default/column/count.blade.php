@@ -1,1 +1,1 @@
-<td>{{{ $value }}} {!! $append !!}</td>
+<td class="row-count">{{{ $value }}} {!! $append !!}</td>

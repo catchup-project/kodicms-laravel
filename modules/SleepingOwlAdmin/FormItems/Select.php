@@ -143,11 +143,13 @@ class Select extends NamedFormItem
     protected function loadOptions()
     {
         $repository = new BaseRepository($this->getModelForOptions());
+
         $key = $repository->getModel()->getKeyName();
         $options = $repository->getQuery()->get()->lists($this->getDisplay(), $key);
         if ($options instanceof Collection) {
             $options = $options->all();
         }
+
         $this->setOptions($options);
     }
 }

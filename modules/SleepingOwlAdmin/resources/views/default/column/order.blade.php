@@ -1,4 +1,4 @@
-<td>
+<td class="row-order">
 	<div class="text-right" style="width: 110px;">
 		@if ($movableUp)
 			<form action="{{ $moveUpUrl }}" method="POST" style="display:inline-block;">
