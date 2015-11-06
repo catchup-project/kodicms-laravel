@@ -2,8 +2,8 @@
 
 namespace KodiCMS\SleepingOwlAdmin;
 
-use Illuminate\Contracts\Support\Renderable;
 use KodiCMS\CMS\Navigation\Section;
+use Illuminate\Contracts\Support\Renderable;
 use KodiCMS\SleepingOwlAdmin\Model\ModelConfiguration;
 use KodiCMS\CMS\Navigation\Section as NavigationSection;
 use KodiCMS\SleepingOwlAdmin\Interfaces\TemplateInterface;
