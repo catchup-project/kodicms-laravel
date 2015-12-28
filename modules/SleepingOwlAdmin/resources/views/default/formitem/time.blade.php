@@ -3,8 +3,8 @@
 
     <div class="col-md-9">
         <div class="input-group">
-            <input data-date-format="{{ $pickerFormat }}" data-date-pickdate="false"
-                   data-date-useseconds="{{ $seconds ? 'true' : 'false' }}" class="form-control" name="{{ $name }}"
+            <input data-format="{{ $format }}" data-pickdate="false"
+                   data-useseconds="{{ $seconds ? 'true' : 'false' }}" class="form-control timepicker" name="{{ $name }}"
                    type="text" id="{{ $name }}" value="{{ $value }}" @if(isset($readonly))readonly="{{ $readonly }}"@endif>
 
             <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>

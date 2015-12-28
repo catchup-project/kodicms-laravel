@@ -28,45 +28,34 @@ class BaseDateTime extends NamedFormItem
     protected $defaultConfigFormat = 'datetimeFormat';
 
     /**
-     * @param string|null $format
-     *
-     * @return $this|string
+     * @return string
      */
-    public function format($format = null)
+    public function getFormat()
     {
-        if (is_null($format)) {
-            if (is_null($this->format)) {
-                $this->format(config('sleeping_owl.'.$this->defaultConfigFormat));
-            }
-
-            return $this->format;
+        if (is_null($this->format)) {
+            $this->setFormat(config('sleeping_owl.'.$this->defaultConfigFormat));
         }
-        $this->format = $format;
 
-        return $this;
+        return $this->format;
     }
 
     /**
-     * @param bool|null $seconds
+     * @param string|null $format
      *
-     * @return $this|bool
+     * @return $this
      */
-    public function seconds($seconds = null)
+    public function setFormat($format)
     {
-        if (is_null($seconds)) {
-            return $this->seconds;
-        }
-        $this->seconds = $seconds;
-
+        $this->format = $format;
         return $this;
     }
 
     /**
      * @return $this|NamedFormItem|mixed|null|string
      */
-    public function value()
+    public function getValue()
     {
-        $value = parent::value();
+        $value = parent::getValue();
         if (empty($value)) {
             $value = null;
         }
@@ -75,28 +64,47 @@ class BaseDateTime extends NamedFormItem
                 $time = Carbon::parse($value);
             } catch (Exception $e) {
                 try {
-                    $time = Carbon::createFromFormat($this->format(), $value);
+                    $time = Carbon::createFromFormat($this->getFormat(), $value);
                 } catch (Exception $e) {
                     return;
                 }
             }
-            $value = $time->format($this->format());
+            $value = $time->format($this->getFormat());
         }
 
         return $value;
     }
 
+    /**
+     * @return boolean
+     */
+    public function hasSeconds()
+    {
+        return (bool) $this->seconds;
+    }
+
+    /**
+     * @param boolean $seconds
+     */
+    public function setSeconds($seconds)
+    {
+        $this->seconds = $seconds;
+    }
+
     public function save()
     {
-        $name = $this->name();
-        $value = parent::value();
+        $name = $this->getName();
+        $value = parent::getValue();
+
         if (empty($value)) {
             $value = null;
         }
+
         if (! is_null($value)) {
-            $value = Carbon::createFromFormat($this->format(), $value);
+            $value = Carbon::createFromFormat($this->getFormat(), $value);
         }
-        $this->instance()->$name = $value;
+
+        $this->getModel()->setAttribute($name, $value);
     }
 
     /**
@@ -105,29 +113,31 @@ class BaseDateTime extends NamedFormItem
     public function getParams()
     {
         return parent::getParams() + [
-            'seconds'      => $this->seconds(),
-            'format'       => $this->format(),
-            'pickerFormat' => $this->pickerFormat(),
+            'seconds'      => $this->hasSeconds(),
+            'format'       => $this->getFormat(),
+            'pickerFormat' => $this->getPickerFormat(),
         ];
     }
 
+
     /**
-     * @param string|null $pickerFormat
-     *
-     * @return $this|string
+     * @return string
      */
-    public function pickerFormat($pickerFormat = null)
+    public function getPickerFormat()
     {
-        if (is_null($pickerFormat)) {
-            if (is_null($this->pickerFormat)) {
-                return $this->generatePickerFormat();
-            }
-
-            return $this->pickerFormat;
+        if (is_null($this->pickerFormat)) {
+            return $this->generatePickerFormat();
         }
-        $this->pickerFormat = $pickerFormat;
 
-        return $this;
+        return $this->pickerFormat;
+    }
+
+    /**
+     * @param string $pickerFormat
+     */
+    public function setPickerFormat($pickerFormat)
+    {
+        $this->pickerFormat = $pickerFormat;
     }
 
     /**
@@ -135,7 +145,7 @@ class BaseDateTime extends NamedFormItem
      */
     protected function generatePickerFormat()
     {
-        $format = $this->format();
+        $format = $this->getFormat();
         $replacement = [
             'i' => 'mm',
             's' => 'ss',

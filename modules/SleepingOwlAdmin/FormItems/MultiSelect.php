@@ -2,6 +2,7 @@
 
 namespace KodiCMS\SleepingOwlAdmin\FormItems;
 
+use Input;
 use Illuminate\Database\Eloquent\Collection;
 
 class MultiSelect extends Select
@@ -10,6 +11,14 @@ class MultiSelect extends Select
      * @var string
      */
     protected $view = 'multiselect';
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name . '[]';
+    }
 
     /**
      * @return array
@@ -26,5 +35,21 @@ class MultiSelect extends Select
         }
 
         return $value;
+    }
+
+    public function save()
+    {
+        $attribute = $this->getAttribute();
+
+        if (is_null(Input::get($this->getPath()))) {
+            $values = [];
+        } else {
+            $values = $this->getValue();
+        }
+
+        /** @var \Illuminate\Database\Eloquent\Relations\BelongsToMany $relation */
+        $relation = $this->getModel()->{$attribute}();
+
+        $relation->sync($values);
     }
 }

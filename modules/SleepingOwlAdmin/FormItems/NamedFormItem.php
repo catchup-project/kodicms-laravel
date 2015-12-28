@@ -194,7 +194,7 @@ abstract class NamedFormItem extends BaseFormItem
      */
     public function setReadonly($readonly)
     {
-        $this->readonly = (bool) $readonly;
+        $this->readonly = (bool)$readonly;
 
         return $this;
     }
@@ -229,7 +229,7 @@ abstract class NamedFormItem extends BaseFormItem
             $model = $this->getModel();
             if ($item == '_unique') {
                 $table = $model->getTable();
-                $item = 'unique:'.$table.','.$this->getAttribute();
+                $item  = 'unique:'.$table.','.$this->getAttribute();
                 if ($model->exists()) {
                     $item .= ','.$model->getKey();
                 }
@@ -265,6 +265,7 @@ abstract class NamedFormItem extends BaseFormItem
     public function getParams()
     {
         return parent::getParams() + [
+            'id'       => $this->getName(),
             'name'     => $this->getName(),
             'label'    => $this->getLabel(),
             'readonly' => $this->isReadonly(),
@@ -281,6 +282,6 @@ abstract class NamedFormItem extends BaseFormItem
         } else {
             $value = $this->getValue();
         }
-        $this->getModel()->$attribute = $value;
+        $this->getModel()->setAttribute($attribute, $value);
     }
 }
