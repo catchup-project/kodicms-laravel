@@ -1,75 +1,76 @@
 <?php
 
 return [
-	'title' => [
-		'pages' => [
-			'create' => 'New page',
-			'list' => 'Pages',
-			'edit' => 'Edit page :title',
-		],
-		'layouts' => [
-			'list' => 'Layouts'
-		]
-	],
-	'status' => [
-		'none' => 'Not specified',
-		'hidden' => 'Hidden',
-		'draft' => 'Draft',
-		'published' => 'Published',
-		'pended' => 'Expectation',
-	],
-	'button' => [
-		'add' => 'Add',
-		'reorder' => 'Sort',
-		'view_front' => 'View',
-		'search' => 'Search',
-	],
-	'tab' => [
-		'page' => [
-			'content' => 'Content',
-			'meta' => 'Meta-information',
-			'options' => 'Settings',
-			'routes' => 'Routes',
-		]
-	],
-	'label' => [
-		'page' => [
-			'created_by' => 'Created :anchor :date',
-			'updated_by' => 'Updated :anchor :date',
-			'layout_not_set' => 'Template Unknown',
-			'current_layout' => 'Current template: name',
-			'redirect' => 'Redirect: :url',
-			'behavior' => 'Behavior: :behavior',
-		]
-	],
-	'field' => [
-		'title' => 'Title',
-		'slug' => 'Slug',
-		'name' => 'Name',
-		'page' => 'Page',
-		'date' => 'Date',
-		'status' => 'Status',
-		'actions' => 'Actions',
-		'search' => 'Search',
-		'breadcrumb' => 'Breadcrumb',
-		'meta_title' => 'Meta-header',
-		'meta_keywords' => 'Keywords',
-		'meta_description' => 'Description',
-		'robots' => 'Indexing by search engines',
-		'is_redirect' => 'Redirect',
-		'redirect_url' => 'URL destination',
-		'parent_id' => 'Parent page',
-		'layout_file' => 'Template',
-		'behavior' => 'Behavior',
-		'published_at' => 'Published at',
-		'created_by_id' => 'Created by',
-		'updated_by_id' => 'Updated by',
-	],
-	'messages' => [
-		'not_found' => 'Page not found',
-		'layout_not_set' => 'For the current page template Unknown',
-		'updated' => 'Page Settings saved',
-		'created' => 'Page created',
-		'behavior_no_routes' => 'This type of behavior has no pages domestic routes',
-	]
+    'title'    => [
+        'pages'   => [
+            'create' => 'Create Page',
+            'list'   => 'List',
+            'edit'   => 'Edit Page :title',
+        ],
+        'layouts' => [
+            'list' => 'List Layouts',
+        ],
+    ],
+    'status'   => [
+        'none'      => 'Not Set',
+        'hidden'    => 'Hidden',
+        'draft'     => 'Draft',
+        'published' => 'Published',
+        'pended'    => 'Pending',
+    ],
+    'button'   => [
+        'add'        => 'Add Button',
+        'reorder'    => 'Reorder',
+        'view_front' => 'View Frontpage',
+        'search'     => 'search',
+    ],
+    'tab'      => [
+        'page' => [
+            'content' => 'Content (page)',
+            'meta'    => 'Meta (page)',
+            'options' => 'Settings',
+            'routes'  => 'Routes',
+        ],
+    ],
+    'label'    => [
+        'page' => [
+            'created_by'     => 'page created by :anchor :date ',
+            'updated_by'     => 'page updated by :anchor :date ',
+            'layout_not_set' => 'Layout Not Set',
+            'current_layout' => 'current layout :name',
+            'redirect'       => 'redirect: :url',
+            'behavior'       => 'behaviour: :behavior',
+        ],
+    ],
+    'field'    => [
+        'title'            => 'field title',
+        'slug'             => 'Часть URL',
+        'name'             => 'field title',
+        'page'             => 'Страница',
+        'date'             => 'Дата',
+        'status'           => 'Status',
+        'actions'          => 'actions',
+        'search'           => 'Поиск',
+        'breadcrumb'       => 'breadcrumbs',
+        'meta_title'       => 'Meta title',
+        'meta_keywords'    => 'Meta Keywords',
+        'meta_description' => 'Description',
+        'robots'           => 'Индексация поисковиками',
+        'is_redirect'      => 'redirect',
+        'redirect_url'     => 'URL адрес назначения',
+        'parent_id'        => 'parent page',
+        'layout_file'      => 'Шаблон',
+        'behavior'         => 'behaviour',
+        'published_at'     => 'Published',
+        'created_by_id'    => 'page created by',
+        'updated_by_id'    => 'page updated by',
+    ],
+    'messages' => [
+        'not_found'          => 'Route Not Found',
+        'layout_not_set'     => 'layout not set',
+        'updated'            => 'settings updated',
+        'created'            => 'settings created',
+        'behavior_no_routes' => 'behaviour no routes',
+        'deleted'            => 'deleted',
+    ],
 ];

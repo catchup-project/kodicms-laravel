@@ -81,7 +81,7 @@ class TreeCollection implements \RecursiveIterator
     }
 
     /**
-     * Исключение из карты сайта страниц по ID.
+     * ИсKeyение из карты сайта страниц по ID.
      *
      * @param array   $ids
      * @param bool $removeChilds

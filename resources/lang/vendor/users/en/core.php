@@ -1,66 +1,66 @@
 <?php
 
 return [
-	'title' => [
-		'list' => 'Users',
-		'profile' => 'Profile',
-		'profile_alternate' => 'Profile :name',
-		'settings' => 'Settings',
-		'permissions' => 'Permissions',
-		'edit' => 'Edit :name',
-		'create' => 'Create user',
-		'theme' => 'Theme',
-	],
-	'tab' => [
-		'general' => 'Main',
-		'password' => 'Password',
-		'roles' => 'Roles',
-		'theme' => 'Theme',
-	],
-	'field' => [
-		'username' => 'Username',
-		'email' => 'E-mail',
-		'password' => 'Password',
-		'password_confirm' => 'Confirm password',
-		'last_login' => 'Last login',
-		'locale' => 'Language',
-		'default_locale' => 'System default (:locale)',
-		'roles' => 'Roles',
-		'actions' => 'Actions',
-		'auth' => [
-			'username' => 'Username or E-mail',
-			'password' => 'Password',
-			'email' => 'E-mail address',
-			'forgot' => 'Forgot your password?',
-			'remember' => 'Remember me on :lifetime days',
-		]
-	],
-	'rule' => [
-		'username' => 'No less :num characters. It must be unique.',
-		'password_change' => 'If you do not want to change your password - leave the field empty.',
-		'roles' => 'Roles define the rights of users to enable/disable control panel screens.',
-	],
-	'button' => [
-		'login' => 'Login',
-		'logout' => 'Logout',
-		'send_password' => 'Send password',
-		'edit' => 'Edit',
-		'create' => 'Add User',
-	],
-	'messages' => [
-		'user' => [
-			'not_found' => 'User not found',
-			'deleted' => 'User removed',
-			'updated' => 'User updated',
-			'created' => 'User created',
-			'empty' => 'Section is empty',
-		],
-		'auth' => [
-			'forgot' => 'Enter the email address to which you want to recover your password.',
-			'deny_access' => 'Access denied',
-			'no_permissions' => 'You do not have the required permissions',
-			'unauthorized' => 'For clients',
-			'user_not_found' => 'Wrong login or password',
-		]
-	]
+    'title'    => [
+        'list'              => 'permissions (users)',
+        'profile'           => 'Профиль',
+        'profile_alternate' => 'Профиль пользователя :name',
+        'settings'          => 'Settings',
+        'permissions'       => 'Права доступа',
+        'edit'              => 'Редактирование пользователя :name',
+        'create'            => 'Создание пользователя',
+        'theme'             => 'Admin Theme',
+    ],
+    'tab'      => [
+        'general'  => 'Information (Site)',
+        'password' => 'Пароль',
+        'roles'    => 'Roles',
+        'theme'    => 'Admin Theme',
+    ],
+    'field'    => [
+        'username'         => 'Имя пользователя',
+        'email'            => 'E-mail',
+        'password'         => 'Пароль',
+        'password_confirm' => 'Подтверждение пароля',
+        'last_login'       => 'Последний вход',
+        'locale'           => 'Язык системы',
+        'default_locale'   => 'Default Locale (:locale)',
+        'roles'            => 'Roles',
+        'actions'          => 'actions',
+        'auth'             => [
+            'username' => 'Логин или E-mail',
+            'password' => 'Пароль',
+            'email'    => 'E-mail адрес',
+            'forgot'   => 'Забыли пароль?',
+            'remember' => 'Запомнить меня на :lifetime дней',
+        ],
+    ],
+    'rule'     => [
+        'username'        => 'Не менее :num символов. Должен быть уникальным.',
+        'password_change' => 'Если не желаете менять пароль — оставьте поля пустыми.',
+        'roles'           => 'Roles определяют права пользователей, позволяют вKeyать/выKeyать разделы панели управления.',
+    ],
+    'button'   => [
+        'login'         => 'Вход',
+        'logout'        => 'Выход',
+        'send_password' => 'Выслать пароль',
+        'edit'          => 'Редактировать',
+        'create'        => 'Add Button пользователя',
+    ],
+    'messages' => [
+        'user' => [
+            'not_found' => 'Пользователь не найден',
+            'deleted'   => 'Пользователь удален',
+            'updated'   => 'Пользователь обновлен',
+            'created'   => 'Пользователь создан',
+            'empty'     => 'В разделе нет документов',
+        ],
+        'auth' => [
+            'forgot'         => 'Укажите email адрес, для которого вы хотите восстановить пароль.',
+            'deny_access'    => 'Dashboard (backend) запрещен',
+            'no_permissions' => 'У вас нет необходимых прав',
+            'unauthorized'   => 'Необходима авторизация',
+            'user_not_found' => 'Не верный логин или пароль',
+        ],
+    ],
 ];

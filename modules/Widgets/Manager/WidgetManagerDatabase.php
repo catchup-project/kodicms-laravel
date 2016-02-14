@@ -81,7 +81,7 @@ class WidgetManagerDatabase extends WidgetManager
      * @return array
      *
      * [
-     *    [ // занятые блоки для исключения из списков
+     *    [ // занятые блоки для исKeyения из списков
      *        (int) {$pageId} => [
      *            (string) {$blockName},
      *            (int) {$position},
@@ -103,7 +103,7 @@ class WidgetManagerDatabase extends WidgetManager
     {
         $query = DB::table('page_widgets');
 
-        $otherWidgets = []; // занятые блоки для исключения из списков
+        $otherWidgets = []; // занятые блоки для исKeyения из списков
         $widgetOnPages = []; // выбранные блоки для текущего виджета
 
         foreach ($query->get() as $row) {

@@ -136,7 +136,7 @@ class Page extends Model implements BehaviorPageInterface
     }
 
     /**
-     * Статус страницы.
+     * Status страницы.
      * @return string
      */
     public function getStatus()
@@ -259,7 +259,7 @@ class Page extends Model implements BehaviorPageInterface
     }
 
     /**
-     * Получение списка страниц за исключением текущей.
+     * Получение списка страниц за исKeyением текущей.
      * @return array
      */
     public function getSitemap()

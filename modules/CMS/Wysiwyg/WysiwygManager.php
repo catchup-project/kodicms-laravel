@@ -97,7 +97,7 @@ class WysiwygManager
     }
 
     /**
-     * Список используемых редакторов на странице.
+     * Список используемых WysiWyGов на странице.
      *
      * @return array
      */
@@ -130,7 +130,7 @@ class WysiwygManager
     }
 
     /**
-     * Получения списка доступных редакторов в системе.
+     * Получения списка доступных WysiWyGов в системе.
      * @return array
      */
     public function getAvailable()
@@ -139,7 +139,7 @@ class WysiwygManager
     }
 
     /**
-     * Получения списка доступных редакторов определенного типа.
+     * Получения списка доступных WysiWyGов определенного типа.
      *
      * @param string $type
      *
@@ -159,7 +159,7 @@ class WysiwygManager
     }
 
     /**
-     * Получение объекта редактора.
+     * Получение объекта WysiWyGа.
      *
      * @param $editorId
      *
@@ -187,7 +187,7 @@ class WysiwygManager
     }
 
     /**
-     * Загрузить в шаблон все редакторы.
+     * Загрузить в шаблон все WysiWyGы.
      */
     public function loadAllEditors()
     {
@@ -197,7 +197,7 @@ class WysiwygManager
     }
 
     /**
-     * Загрузить в шаблон редакторы кода.
+     * Загрузить в шаблон WysiWyGы кода.
      */
     public function loadCodeEditors()
     {
@@ -207,7 +207,7 @@ class WysiwygManager
     }
 
     /**
-     * Загрузить в шаблон редакторы текса.
+     * Загрузить в шаблон WysiWyGы текса.
      */
     public function loadHTMLEditors()
     {
@@ -217,7 +217,7 @@ class WysiwygManager
     }
 
     /**
-     * Загрузить в шаблон редактор текста по умолчанию.
+     * Загрузить в шаблон WysiWyG текста по умолчанию.
      */
     public function loadDefaultHTMLEditor()
     {
@@ -225,7 +225,7 @@ class WysiwygManager
     }
 
     /**
-     * Загрузить в шаблон редактор кода по умолчанию.
+     * Загрузить в шаблон Code Editor (wysiwyg) по умолчанию.
      */
     public function loadDefaultCodeEditor()
     {
@@ -233,7 +233,7 @@ class WysiwygManager
     }
 
     /**
-     * Загрузить в шаблон редакторы по умолчанию.
+     * Загрузить в шаблон WysiWyGы по умолчанию.
      */
     public function loadDefaultEditors()
     {
@@ -242,7 +242,7 @@ class WysiwygManager
     }
 
     /**
-     * Загрузить редактор в шаблон по идентификатору.
+     * Загрузить WysiWyG в шаблон по идентификатору.
      *
      * @param string $editorId
      *
@@ -266,7 +266,7 @@ class WysiwygManager
     }
 
     /**
-     * Применить фильтр используемый редактором к тексту.
+     * Применить фильтр используемый WysiWyGом к тексту.
      *
      * @param string $editorId
      * @param string $text
@@ -284,7 +284,7 @@ class WysiwygManager
     }
 
     /**
-     * Получение списка редакторов для выпадающего списка.
+     * Получение списка WysiWyGов для выпадающего списка.
      *
      * @param string $type
      *
@@ -300,7 +300,7 @@ class WysiwygManager
     }
 
     /**
-     * Получение списка редакторов для выпадающего списка подключенных в шаблон.
+     * Получение списка WysiWyGов для выпадающего списка подKeyенных в шаблон.
      *
      * @return array
      */

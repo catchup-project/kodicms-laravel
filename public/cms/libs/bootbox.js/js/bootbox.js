@@ -916,7 +916,7 @@
     },
     ru : {
       OK      : "OK",
-      CANCEL  : "Отмена",
+      CANCEL  : "Cancel",
       CONFIRM : "Применить"
     },
     sq : {

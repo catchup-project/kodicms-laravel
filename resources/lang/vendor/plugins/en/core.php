@@ -1,22 +1,22 @@
 <?php
 
 return [
-	'title' => 'Plug-ins',
-	'plugin_settings' => 'Plugin settings',
-	'plugin_settings_page' => 'Plugin settings [: title]',
-	'field' => [
-		'title' => 'Plug-in',
-		'actions' => 'Actions',
-	],
-	'detail' => [
-		'author' => 'Author',
-		'version' => 'Version',
-	],
-	'button' => [
-		'settings' => 'Settings',
-	],
-	'messages' => [
-		'settings_saved' => 'Plugin settings [: title] saved',
-		'not_installable' => 'The plugin can be installed. The required version of CMS: :required_version. Version of your system: :current_version.',
-	]
+    'title'                => 'Plugins',
+    'plugin_settings'      => 'plugin settings',
+    'plugin_settings_page' => 'plugin settings page [:title]',
+    'field'                => [
+        'title'   => 'title',
+        'actions' => 'actions',
+    ],
+    'detail'               => [
+        'author'  => 'author',
+        'version' => 'version',
+    ],
+    'button'               => [
+        'settings' => 'settings',
+    ],
+    'messages'             => [
+        'settings_saved'  => 'settings_saved [:title]',
+        'not_installable' => 'not_installable CMS: :required_version. Current Version: :current_version.',
+    ],
 ];

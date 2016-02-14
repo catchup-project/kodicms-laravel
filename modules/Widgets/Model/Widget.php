@@ -168,7 +168,7 @@ class Widget extends Model
 
         $query = DB::table('page_widgets')->get();
 
-        $blocksToExclude = []; // занятые блоки для исключения из списков
+        $blocksToExclude = []; // занятые блоки для исKeyения из списков
         $widgetBlocks = []; // выбранные блоки для текущего виджета
 
         foreach ($query as $row) {

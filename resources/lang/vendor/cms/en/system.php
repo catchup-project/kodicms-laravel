@@ -1,51 +1,54 @@
 <?php
 
 return [
-	'tab' => [
-		'about' => [
-			'general' => 'Summary',
-			'php_info' => 'PHP Information'
-		],
-		'settings' => [
-			'site_information' => 'Main',
-			'regional' => 'Regional settings',
-			'debug' => 'Debugging',
-			'wysiwig' => 'Wysiwig editor',
-			'session' => 'Session options',
-			'ace_editor' => 'Ace',
-		]
-	],
-	'label' => [
-		'about' => [
-			'cms' => 'system Version',
-			'framework' => 'The framework',
-			'php_version' => 'PHP version',
-			'environment' => 'The current environment',
-			'host' => 'Host',
-			'server' => 'Server',
-			'cache_driver' => 'Cache driver',
-			'session_driver' => 'Session driver',
-		],
-		'settings' => [
-			'session_storage' => 'Repository',
-			'html_editor' => 'HTML editor',
-			'code_editor' => 'Code Editor',
-			'debug_mode' => 'Debugging mode',
-			'date_format' => 'Time format',
-			'default_locale' => 'Default language system',
-			'site_title' => 'Website Title',
-			'site_description' => 'Description',
-			'select_ace_theme' => 'Choose a theme',
-		]
-	],
-	'button' => [
-		'settings' => [
-			'save' => 'retain'
-		]
-	],
-	'messages' => [
-		'settings' => [
-			'saved' => 'Settings saved'
-		]
-	]
+    'tab'      => [
+        'about'    => [
+            'general'  => 'General',
+            'php_info' => 'InformationPHP',
+        ],
+        'settings' => [
+            'site_information' => 'Information (Site)',
+            'regional'         => 'Regional',
+            'debug'            => 'Debug',
+            'wysiwig'          => 'WysiWyG',
+            'session'          => 'Session',
+            'ace_editor'       => 'Ace',
+        ],
+    ],
+    'label'    => [
+        'about'    => [
+            'cms'            => 'CMS',
+            'framework'      => 'Framework',
+            'php_version'    => 'PHP Version',
+            'environment'    => 'Environment',
+            'host'           => 'Host',
+            'server'         => 'Server',
+            'cache_driver'   => 'Cache Driver',
+            'session_driver' => 'Session Driver (type)',
+        ],
+        'settings' => [
+            'session_storage'  => 'Session Storage',
+            'html_editor'      => 'HTML WysiWyG',
+            'code_editor'      => 'Code Editor (wysiwyg)',
+            'debug_mode'       => 'Debug Mode',
+            'profiling_mode'   => 'Profiling Mode',
+            'date_format'      => 'Date format',
+            'default_locale'   => 'Default Locale',
+            'site_title'       => 'Site title',
+            'site_description' => 'Description',
+            'select_ace_theme' => 'Select ACE Theme',
+        ],
+    ],
+    'button'   => [
+        'settings' => [
+            'save' => 'Save',
+        ],
+        'on'       => 'On (enabled)',
+        'off'      => 'Off (disabled)',
+    ],
+    'messages' => [
+        'settings' => [
+            'saved' => 'Settings Saved',
+        ],
+    ],
 ];

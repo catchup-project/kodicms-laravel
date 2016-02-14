@@ -5,7 +5,7 @@ return [
         'title' => 'Default',
     ],
     'images'     => [
-        'title' => 'Изображения',
+        'title' => 'images',
     ],
     'categories' => [
         'title'   => [

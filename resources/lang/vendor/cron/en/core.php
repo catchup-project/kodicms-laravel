@@ -1,78 +1,80 @@
 <?php
+
 return [
-	'title' => [
-		'list' => 'Tasks',
-		'cron' => [
-			'create' => 'The new challenge',
-			'edit' => 'Editing task :title',
-		]
-	],
-	'field' => [
-		'name' => 'Title',
-		'task_name' => 'Function',
-		'date_start' => 'First run',
-		'date_end' => 'Last Run',
-		'last_run' => 'Last Run',
-		'next_run' => 'Next start',
-		'interval' => 'Interval',
-		'crontime' => 'Line crontime',
-		'status' => 'Status',
-		'actions' => 'Actions',
-		'attempts' => 'Attempts',
-	],
-	'button' => [
-		'create' => 'Create a task',
-		'run' => 'Start job',
-	],
-	'tab' => [
-		'general' => 'General information',
-		'options' => 'OPTIONS',
-	],
-	'jobs' => [
-		'test' => 'Testing cron',
-	],
-	'interval' => [
-		'minute' => 'Minute',
-		'hour' => 'Hour',
-		'day' => 'Day',
-		'week' => 'Week',
-		'month' => 'Month',
-		'year' => 'Year',
-		'or' => 'Or',
-	],
-	'crontab' => [
-		'help' => 'Description',
-		'weekday' => 'Day of the week (0 - 7) (Sunday is 0 or 7)',
-		'month' => 'Month (1 - 12)',
-		'day' => 'The day (1 - 31)',
-		'hour' => 'Hour (0 - 23)',
-		'minute' => 'Minute (0 - 59)',
-	],
-	'messages' => [
-		'created' => 'Task created',
-		'updated' => 'Task updated',
-		'deleted' => 'The task removed',
-		'runned' => 'The problem started',
-		'not_found' => 'Problem Found',
-		'empty' => 'There are no problems',
-	],
-	'statuses' => [
-		-1 => 'Not done',
-		1 => 'The new challenge',
-		2 => 'Running Now',
-		3 => 'Task completed',
-	],
-	'logs' => [
-		'title' => 'The history of execution',
-		'created_at' => 'Start time',
-		'status' => 'Execution',
-	],
-	'settings' => [
-		'title' => 'Setting objectives',
-		'info' => 'If you use cron crontab necessary to add the following line:',
-		'agents' => [
-			'system' => 'System',
-			'cron' => 'Crontab',
-		],
-	],
+    'title'    => [
+        'list' => 'Задачи',
+        'cron' => [
+            'create' => 'Новая задача',
+            'edit'   => 'Редактирование задачи :title',
+        ],
+    ],
+    'field'    => [
+        'name'       => 'fieldname',
+        'task_name'  => 'taskname',
+        'date_start' => 'Первый запуск',
+        'date_end'   => 'Последний запуск',
+        'last_run'   => 'Последний запуск',
+        'next_run'   => 'Следующий запуск',
+        'interval'   => 'Интервал',
+        'crontime'   => 'Строка crontime',
+        'status'     => 'Status',
+        'actions'    => 'actions',
+        'attempts'   => 'Попыток',
+    ],
+    'button'   => [
+        'create' => 'Create задачу',
+        'run'    => 'Запустить задачу',
+    ],
+    'tab'      => [
+        'general' => 'general tab',
+        'options' => 'Опции запуска',
+    ],
+    'jobs'     => [
+
+    ],
+    'interval' => [
+        'minute' => 'Минута',
+        'hour'   => 'Час',
+        'day'    => 'День',
+        'week'   => 'Неделя',
+        'month'  => 'Месяц',
+        'year'   => 'Год',
+        'or'     => 'Или',
+    ],
+    'crontab'  => [
+        'help'    => 'Description',
+        'weekday' => 'День недели (0 - 7) (Воскресенье 0 или 7)',
+        'month'   => 'Месяц (1 - 12)',
+        'day'     => 'День (1 - 31)',
+        'hour'    => 'Час (0 - 23)',
+        'minute'  => 'Минута (0 - 59)',
+    ],
+    'messages' => [
+        'created'   => 'Задача создана',
+        'updated'   => 'Задача обновлена',
+        'deleted'   => 'Задача удалена',
+        'runned'    => 'Задача запущена',
+        'not_found' => 'Задача не найдена',
+        'empty'     => 'Нет созданных задач',
+    ],
+    'statuses' => [
+        -1 => 'Не выполнена',
+        1  => 'Новая задача',
+        2  => 'Выполняется сейчас',
+        3  => 'Задача выполнена',
+    ],
+    'logs'     => [
+        'title'      => 'История выполнения',
+        'created_at' => 'Время запуска',
+        'status'     => 'Status выполнения',
+    ],
+    'settings' => [
+        'title'  => 'Настройка задач',
+        'info'   => 'При использовании cron необходимо в crontab добавить следующую строку:',
+        'agent'  => 'Агент',
+        'agents' => [
+            'system' => 'System',
+            'cron'   => 'Crontab',
+        ],
+    ],
 ];

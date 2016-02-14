@@ -16,29 +16,29 @@ return [
     ],
     'button'        => [
         'events'    => [
-            'create' => 'Создать событие',
+            'create' => 'Create событие',
         ],
         'templates' => [
-            'create' => 'Создать письмо',
+            'create' => 'Create письмо',
         ],
     ],
     'field'         => [
         'events'    => [
-            'name'   => 'Название события',
+            'name'   => 'fieldname события',
             'code'   => 'Код события',
             'fields' => 'Параметры',
         ],
         'templates' => [
             'email_event'  => 'Почтовое событие',
-            'status'       => 'Статус',
+            'status'       => 'Status',
             'use_queue'    => 'Метод отправки сообщения',
             'email_from'   => 'От кого',
             'email_to'     => 'Кому',
-            'subject'      => 'Тема',
+            'subject'      => 'Admin Theme',
             'message'      => 'Текст письма',
             'message_type' => 'Тип сообщения',
-            'cc'           => 'Копия',
-            'bcc'          => 'Скрытая копия',
+            'cc'           => 'CC',
+            'bcc'          => 'Blind CC',
             'reply_to'     => 'Ответ на',
         ],
         'actions'   => 'События',
@@ -52,22 +52,22 @@ return [
             'job_not_found' => 'Событие :name не найдено',
         ],
         'templates' => [
-            'created'   => 'Шаблон создан',
-            'updated'   => 'Шаблон обновлен',
-            'deleted'   => 'Шаблон удален',
-            'not_found' => 'Шаблон не найден',
+            'created'   => 'Layout created',
+            'updated'   => 'Layout updated',
+            'deleted'   => 'Layout deleted',
+            'not_found' => 'Layout not found',
         ],
     ],
     'tab'           => [
-        'general'      => 'Общая информация',
+        'general'      => 'general tab',
         'fields'       => 'Используемые параметры',
         'message'      => 'Текст письма',
-        'message_info' => 'Коллекция шаблонов писем с отзывчивым дизайном :link',
+        'message_info' => 'Коллекция шаблонов писем с отзывчивым Designом :link',
     ],
     'templates'     => [
         'title'      => 'Связанные почтовые шаблоны',
         'created_at' => 'Время запуска',
-        'status'     => 'Статус выполнения',
+        'status'     => 'Status выполнения',
     ],
     'statuses'      => [
         0 => 'Неактивен',
@@ -83,14 +83,14 @@ return [
     ],
     'template_data' => [
         'default_email'    => 'E-Mail адрес по умолчанию',
-        'site_title'       => 'Заголовок сайта',
-        'site_description' => 'Описание сайта',
+        'site_title'       => 'Site title',
+        'site_description' => 'Description сайта',
         'base_url'         => 'Адрес сайта (в формате :format)',
-        'current_date'     => 'Текущая дата (в формате :format)',
-        'current_time'     => 'Текущее время (в формате :format)',
+        'current_date'     => 'Mini Calendar (в формате :format)',
+        'current_time'     => 'Current время (в формате :format)',
     ],
     'settings'      => [
-        'title'         => 'Настройки почты',
+        'title'         => 'Settings email',
         'queue'         => [
             'title'             => 'Параметры очереди сообщений',
             'batch_size'        => 'Кол-во сообщений отправляемых за одну отправку',
@@ -102,7 +102,7 @@ return [
         'default_email' => 'Email адрес по умолчанию',
         'email_driver'  => 'Драйвер',
         'test'          => [
-            'label'           => 'Для отправки тестового письма необходимо сохранить настройки',
+            'label'           => 'Для отправки тестового письма необходимо Save Settings',
             'btn'             => 'Отправить тестовое письмо',
             'subject'         => 'Тестовое письмо',
             'message'         => 'Тестовое сообщение',
@@ -110,12 +110,12 @@ return [
             'result_negative' => 'Тестовое письмо не было отправлено',
         ],
         'sendmail'      => [
-            'path'        => 'Путь к исполняемому файлу',
+            'path'        => 'path к исполняемому файлу',
             'placeholder' => 'Например: /usr/sbin/sendmail',
-            'help'        => 'Путь до программы sendmail, обычно :path1 или :path2. :link',
+            'help'        => 'path до программы sendmail, обычно :path1 или :path2. :link',
         ],
         'smtp'          => [
-            'host'       => 'Сервер',
+            'host'       => 'Server',
             'port'       => 'Порт',
             'username'   => 'Имя пользователя',
             'password'   => 'Пароль',
@@ -123,10 +123,10 @@ return [
         ],
         'mailgun'       => [
             'domain' => 'Домен',
-            'secret' => 'Секретный ключ',
+            'secret' => 'Секретный Key',
         ],
         'mandrill'      => [
-            'secret' => 'Секретный ключ',
+            'secret' => 'Секретный Key',
         ],
     ],
     'jobs'          => [

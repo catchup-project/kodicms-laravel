@@ -43,7 +43,7 @@ class Updater
     }
 
     /**
-     * Получение номер версии с удаленного сервера.
+     * Получение номер версии с удаленного Serverа.
      * @return string
      */
     public function getRemoteVersion()

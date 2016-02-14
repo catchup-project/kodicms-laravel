@@ -1,17 +1,17 @@
 <?php
 
 return [
-	'cache_button' => [
-		'title' => 'Cleaning the cache',
-		'clear_cache' => 'Clear cache'
-	],
-	'mini_calendar' => [
-		'title' => 'Current date',
-		'label' => [
-			'format' => 'Time format'
-		]
-	],
-	'kodicms_rss' => [
-		'title' => 'KodiCMS updates'
-	]
+    'cache_button'  => [
+        'title'       => 'Cache Button',
+        'clear_cache' => 'Clear Cache',
+    ],
+    'mini_calendar' => [
+        'title' => 'Mini Calendar',
+        'label' => [
+            'format' => 'Format',
+        ],
+    ],
+    'kodicms_rss'   => [
+        'title' => 'RSS Feed KodiCMS',
+    ],
 ];

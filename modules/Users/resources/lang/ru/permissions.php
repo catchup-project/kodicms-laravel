@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Пользователи',
+    'title' => 'permissions (users)',
     'user'  => [
         'list'             => 'Просмотр списка',
         'create'           => 'Создание',

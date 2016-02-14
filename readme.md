@@ -7,7 +7,7 @@
 
  * Клонировать репозиторий *(Clone repository)* `git clone https://github.com/KodiCMS/kodicms-laravel.git`
  * Запустить команду *(Run command)* `composer install` для загрузки всех необходимых компонентов
- * Выполнить установку системы *(Install CMS)* `php artisan cms:install` (`php artisan cms:install --help`) Или переименовать .env.example в .env и настроить подключение к БД, затем выполнить комманду *(Or rename .env.example to .env and set database connection, then run artisan command)* `php artisan cms:modules:migrate --seed`
+ * Выполнить установку системы *(Install CMS)* `php artisan cms:install` (`php artisan cms:install --help`) Или переименовать .env.example в .env и настроить подKeyение к БД, затем выполнить комманду *(Or rename .env.example to .env and set database connection, then run artisan command)* `php artisan cms:modules:migrate --seed`
  
 ---
 
@@ -45,7 +45,7 @@ password: **password**
 
 
 ##### App/Http/Middleware/VerifyCsrfToken.php
-Наследование `VerifyCsrfToken` от `KodiCMS\CMS\Http\Middleware\VerifyCsrfToken` для возможности добавления исключения для модулей. На данный момент 
+Наследование `VerifyCsrfToken` от `KodiCMS\CMS\Http\Middleware\VerifyCsrfToken` для возможности добавления исKeyения для модулей. На данный момент
 используется только модулем Filemanager. **Желательно для установки**
 
 ##### config/app.php
@@ -57,7 +57,7 @@ password: **password**
    ...
    /*
     * KodiCMS Service Providers...
-    * Установить до App провафдеров
+    * Place Widget до App провафдеров
     */
    KodiCMS\Support\Html\HtmlServiceProvider::class,
    Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class, // Можно не использовать, необходимо очистить 
@@ -86,16 +86,16 @@ password: **password**
  
  * `php artisan cms:modules:publish` - публикация `view` шаблонов *(Publish view templates)*
  * `php artisan cms:modules:locale:publish` - генерация пакета lang файлов для перевода. Файлы будут скопированы в `/resources/lang/vendor`
- * `php artisan cms:modules:locale:diff --locale=en` - проверка наличия всех ключей в переводе в папке `/resources/lang/vendor` относительно модулей.
+ * `php artisan cms:modules:locale:diff --locale=en` - проверка наличия всех Keyей в переводе в папке `/resources/lang/vendor` относительно модулей.
  * `php artisan cms:generate:translate:js` - генерация JS языковых файлов *(Generate javascript translate admin files)*
  
  * `php artisan modules:list` - просмотр информации о добавленных модулях и плагинов *(Show modules information)*
- * `php artisan cms:wysiwyg:list` - список установленных в системе редакторов текста *(Show wysiwyg information)*
+ * `php artisan cms:wysiwyg:list` - список установленных в системе WysiWyGов текста *(Show wysiwyg information)*
  * `php artisan cms:packages:list` - список всех media пакетов *(Show asset packages list)*
  * `php artisan cms:plugins:list` - просмотр информации о добавленных плагинах *(Show plugins information)*
  
  * `php artisan cms:layout:rebuild-blocks` - индексация размеченых блоков в шаблонах *(Rebuild templates blocks)*
- * `php artisan cms:api:generate-key` - генерация нового API ключа *(Generate API key)*
+ * `php artisan cms:api:generate-key` - генерация нового API Keyа *(Generate API key)*
  * `php artisan cms:reflinks:delete-expired` - Удаление просроченых сервисных ссылок
   
  * `php artisan cms:make:controller` - создание контроллера (`cms:make:controller TestController --module=cms --type=backend` создаст контроллер в модуле `modules\CMS`. Существует два типа контроллеров `[api, backend]`)
@@ -114,8 +114,8 @@ password: **password**
  * Модуль поиска с использованием ElasticSearch
  * Работа с изображениями. Загрузка, редактирование, изменение размера на лету, вставка в текст.
  * Локализация
- * Виджеты для вывода данныхх
+ * List для вывода данныхх
  * Развитие модуля DataSource
 
-### Отдельное спасибо команде JetBrains за бесплатно предоставленый ключ для PHPStorm
+### Отдельное спасибо команде JetBrains за бесплатно предоставленый Key для PHPStorm
 ![PHPStorm](https://www.jetbrains.com/phpstorm/documentation/docs/logo_phpstorm.png)

@@ -81,7 +81,7 @@ class WidgetRenderHTML extends WidgetRenderAbstract
     {
         $template = $this->getWidget()->getFrontendTemplate();
 
-        // Если не указан шаблон и указан шаблон по умолчанию
+        // Если Not Set шаблон и указан шаблон по умолчанию
         if (is_null($template) and ! is_null($template = $this->getWidget()->getDefaultFrontendTemplate())) {
             if ($template instanceof View) {
                 return $template->with($preparedData);

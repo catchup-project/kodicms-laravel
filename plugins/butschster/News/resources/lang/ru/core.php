@@ -5,17 +5,17 @@ return [
         'list' => 'Новости',
     ],
     'field'    => [
-        'title'       => 'Заголовок',
+        'title'       => 'field title',
         'slug'        => 'Ссылка',
         'user'        => 'Создатель',
         'created_at'  => 'Дата создания',
         'updated_at'  => 'Дата обновления',
         'content'     => 'Полный текст',
-        'description' => 'Описание',
-        'actions'     => 'Действия',
+        'description' => 'Description',
+        'actions'     => 'actions',
     ],
     'button'   => [
-        'create' => 'Добавить новость',
+        'create' => 'Add Button новость',
     ],
     'messages' => [
         'empty' => 'Раздел новостей пуст',

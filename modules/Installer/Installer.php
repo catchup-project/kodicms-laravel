@@ -216,7 +216,7 @@ class Installer
      */
     public function createDBConnection(array $config)
     {
-        // Сбрасываем подключение к БД
+        // Сбрасываем подKeyение к БД
         DB::purge();
 
         $driver = $config['driver'];
@@ -227,7 +227,7 @@ class Installer
         }
         unset($config['driver']);
 
-        // Обновляем данные подключения к БД
+        // Обновляем данные подKeyения к БД
         foreach ($config as $key => $value) {
             Config::set("database.connections.{$driver}.{$key}", $value);
         }

@@ -6,13 +6,13 @@ return [
     'paginator' => [
         'title'   => 'Постраничная навигация',
         'label'   => [
-            'settings' => 'Настройки списка',
+            'settings' => 'Settings списка',
         ],
         'setting' => [
             'list_offset'      => 'Кол-во пропускаемых документов',
             'list_size'        => 'Кол-во документов на странице',
             'linked_widget_id' => 'Виджет',
-            'query_key'        => 'Ключ [$_GET]',
+            'query_key'        => 'Key [$_GET]',
         ],
     ],
 ];

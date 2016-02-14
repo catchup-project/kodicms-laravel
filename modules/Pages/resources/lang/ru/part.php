@@ -2,12 +2,12 @@
 
 return [
     'label'  => [
-        'protected'  => 'Защитить',
-        'indexation' => 'Индексировать',
-        'editor'     => 'Редактор',
+        'protected'  => 'protected',
+        'indexation' => 'indexing',
+        'editor'     => 'WysiWyG',
     ],
     'button' => [
-        'create' => 'Добавить часть страницы',
-        'remove' => 'Удалить',
+        'create' => 'add button create',
+        'remove' => 'remove',
     ],
 ];

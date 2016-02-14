@@ -10,7 +10,7 @@ return [
     ],
     'similar'        => [
         'similarity'         => 3, // Степень схожести слова (Чем меньше число, тем меньше точность)
-        'return_parent_page' => false, // Включить переход на уровень выше, если слово не найдено
+        'return_parent_page' => false, // ВKeyить переход на уровень выше, если слово не найдено
         'find_in_statuses'   => [ // Статусы страниц, в которых искать
             FrontendPage::STATUS_PUBLISHED,
         ],

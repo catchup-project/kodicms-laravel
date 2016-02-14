@@ -2,32 +2,32 @@
 
 return [
     'page_menu'        => [
-        'title'   => 'Меню',
+        'title'   => 'menu',
         'label'   => [
-            'excluded_pages' => 'Исключить страницы из списка',
-            'linked_page'    => '-- Относительно текущей страницы --',
+            'excluded_pages' => 'excluded pages',
+            'linked_page'    => '-- linked pages --',
         ],
         'setting' => [
-            'start_page'           => 'Корневая страница',
-            'include_children'     => 'Выводить дочерние элементы',
-            'include_hidden_pages' => 'Показывать скрытые страницы',
-            'page_level'           => 'Задать уровень',
+            'start_page'           => 'start page',
+            'include_children'     => 'include children',
+            'include_hidden_pages' => 'include hidden pages',
+            'page_level'           => 'page level',
         ],
     ],
     'page_list'        => [
-        'title'   => 'Список страниц',
+        'title'   => 'page list title',
         'label'   => [
-            'linked_page' => '-- Относительно текущей страницы --',
+            'linked_page' => '-- linked pages --',
         ],
         'setting' => [
-            'start_page'          => 'Корневая страница',
-            'include_user_object' => 'Загружать объект пользователя',
+            'start_page'          => 'start page',
+            'include_user_object' => 'include user object',
         ],
     ],
     'page_breadcrumbs' => [
-        'title' => 'Хлебные крошки',
+        'title' => 'breadcrumbs',
         'label' => [
-            'excluded_pages' => 'Исключить страницы из списка',
+            'excluded_pages' => 'excluded pages',
         ],
     ],
 ];

@@ -1,7 +1,8 @@
 <?php
+
 return [
-	'public' => 'Root',
-	'title' => [
-		'index' => 'File manager'
-	]
+    'public' => 'Public',
+    'title'  => [
+        'index' => 'Filemanager Index',
+    ],
 ];

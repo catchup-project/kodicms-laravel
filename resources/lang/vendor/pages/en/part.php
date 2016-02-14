@@ -1,12 +1,13 @@
 <?php
+
 return [
-	'label' => [
-		'protected' => 'Protected',
-		'indexation' => 'Index',
-		'editor' => 'Editor',
-	],
-	'button' => [
-		'create' => 'Add page part',
-		'remove' => 'Remove',
-	]
+    'label'  => [
+        'protected'  => 'protected',
+        'indexation' => 'indexing',
+        'editor'     => 'WysiWyG',
+    ],
+    'button' => [
+        'create' => 'add button create',
+        'remove' => 'remove',
+    ],
 ];

@@ -60,7 +60,7 @@ class Layout extends File
     }
 
     /**
-     * Обновление списка блоков шаблона.
+     * Update списка блоков шаблона.
      * @return mixed
      */
     public function findBlocks()

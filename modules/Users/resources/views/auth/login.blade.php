@@ -27,7 +27,7 @@
 			<label class="checkbox-inline">
 				{!! Form::checkbox('remember', 'checked', TRUE, ['class' => 'px', 'id' => 'rememder']) !!}
 				<span class="lbl">
-					<?php //TODO: вынести настройки lifetime в конфиг ?>
+					<?php //TODO: вынести Settings lifetime в конфиг ?>
 					{{ trans('users::core.field.auth.remember', ['lifetime' => 10]) }}
 				</span>
 			</label>

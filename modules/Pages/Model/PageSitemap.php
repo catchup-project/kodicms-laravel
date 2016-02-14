@@ -16,7 +16,7 @@ class PageSitemap
     /**
      * Получение карты сайта.
      *
-     * @param bool $includeHidden Включить скрытые страницы
+     * @param bool $includeHidden ВKeyить скрытые страницы
      *
      * @return Sitemap
      */

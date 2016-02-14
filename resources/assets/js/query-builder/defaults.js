@@ -141,10 +141,10 @@ QueryBuilder.regional = {
     },
     ru: {
         "__locale": "Russian (ru)",
-        "add_rule": "Добавить",
-        "add_group": "Добавить группу",
-        "delete_rule": "Удалить",
-        "delete_group": "Удалить",
+        "add_rule": "Add Button",
+        "add_group": "Add Button группу",
+        "delete_rule": "remove",
+        "delete_group": "remove",
         "conditions": {
             "AND": "И",
             "OR": "ИЛИ"
@@ -172,11 +172,11 @@ QueryBuilder.regional = {
             "is_not_null": "не пусто"
         },
         "errors": {
-            "no_filter": "Фильтр не выбран",
+            "no_filter": "Фильтр Not Select",
             "empty_group": "Группа пуста",
-            "radio_empty": "Не выбранно значение",
-            "checkbox_empty": "Не выбранно значение",
-            "select_empty": "Не выбранно значение",
+            "radio_empty": "Not Selectно значение",
+            "checkbox_empty": "Not Selectно значение",
+            "select_empty": "Not Selectно значение",
             "string_empty": "Не заполненно",
             "string_exceed_min_length": "Должен содержать больше {0} символов",
             "string_exceed_max_length": "Должен содержать меньше {0} символов",

@@ -2,20 +2,20 @@
 
 return [
     'title'    => [
-        'list'              => 'Пользователи',
+        'list'              => 'permissions (users)',
         'profile'           => 'Профиль',
         'profile_alternate' => 'Профиль пользователя :name',
-        'settings'          => 'Настройки',
+        'settings'          => 'Settings',
         'permissions'       => 'Права доступа',
         'edit'              => 'Редактирование пользователя :name',
         'create'            => 'Создание пользователя',
-        'theme'             => 'Тема',
+        'theme'             => 'Admin Theme',
     ],
     'tab'      => [
-        'general'  => 'Основные',
+        'general'  => 'Information (Site)',
         'password' => 'Пароль',
-        'roles'    => 'Роли',
-        'theme'    => 'Тема',
+        'roles'    => 'Roles',
+        'theme'    => 'Admin Theme',
     ],
     'field'    => [
         'username'         => 'Имя пользователя',
@@ -24,9 +24,9 @@ return [
         'password_confirm' => 'Подтверждение пароля',
         'last_login'       => 'Последний вход',
         'locale'           => 'Язык системы',
-        'default_locale'   => 'Язык системы по умолчанию (:locale)',
-        'roles'            => 'Роли',
-        'actions'          => 'Действия',
+        'default_locale'   => 'Default Locale (:locale)',
+        'roles'            => 'Roles',
+        'actions'          => 'actions',
         'auth'             => [
             'username' => 'Логин или E-mail',
             'password' => 'Пароль',
@@ -38,14 +38,14 @@ return [
     'rule'     => [
         'username'        => 'Не менее :num символов. Должен быть уникальным.',
         'password_change' => 'Если не желаете менять пароль — оставьте поля пустыми.',
-        'roles'           => 'Роли определяют права пользователей, позволяют включать/выключать разделы панели управления.',
+        'roles'           => 'Roles определяют права пользователей, позволяют вKeyать/выKeyать разделы панели управления.',
     ],
     'button'   => [
         'login'         => 'Вход',
         'logout'        => 'Выход',
         'send_password' => 'Выслать пароль',
         'edit'          => 'Редактировать',
-        'create'        => 'Добавить пользователя',
+        'create'        => 'Add Button пользователя',
     ],
     'messages' => [
         'user' => [
@@ -57,7 +57,7 @@ return [
         ],
         'auth' => [
             'forgot'         => 'Укажите email адрес, для которого вы хотите восстановить пароль.',
-            'deny_access'    => 'Доступ запрещен',
+            'deny_access'    => 'Dashboard (backend) запрещен',
             'no_permissions' => 'У вас нет необходимых прав',
             'unauthorized'   => 'Необходима авторизация',
             'user_not_found' => 'Не верный логин или пароль',

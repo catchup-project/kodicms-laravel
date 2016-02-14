@@ -1,37 +1,37 @@
 <?php
 
 return [
-	'title' => [
-		'list' => 'Snippets',
-		'edit' => 'Edit snippet :name',
-		'create' => 'Create snippet',
-	],
-	'button' => [
-		'add' => 'Add',
-		'edit' => 'Edit',
-		'filemanager' => 'File Manager',
-	],
-	'label' => [
-		'readonly' => 'Read-only',
-		'wysiwyg' => 'Editor',
-		'roles' => 'Role',
-		'settings' => 'Settings',
-	],
-	'field' => [
-		'name' => 'Title',
-		'modified' => 'Modified date',
-		'size' => 'Size',
-		'path' => 'Path',
-		'content' => 'Content',
-		'actions' => 'Actions',
-	],
-	'messages' => [
-		'snippet_not_writeable' => 'The snippet in read-only mode',
-		'directory_not_writeable' => 'Directory [:dir] is not writable',
-		'not_found' => 'Pattern not found',
-		'deleted' => 'Snippet [:name] deleted',
-		'updated' => 'Snippet [:name] updated',
-		'created' => 'Snippet created',
-		'empty' => 'You do not have snippets',
-	]
+    'title'    => [
+        'list'   => 'Сниппеты',
+        'edit'   => 'Редактирование снипета :name',
+        'create' => 'Создание снипета',
+    ],
+    'button'   => [
+        'add'         => 'Add Button',
+        'edit'        => 'Редактировать',
+        'filemanager' => 'filemanager',
+    ],
+    'label'    => [
+        'readonly' => 'read-only',
+        'wysiwyg'  => 'WysiWyG',
+        'roles'    => 'Roles',
+        'settings' => 'Settings',
+    ],
+    'field'    => [
+        'name'     => 'fieldname',
+        'modified' => 'field modified',
+        'size'     => 'size',
+        'path'     => 'path',
+        'content'  => 'Content (page)',
+        'actions'  => 'actions',
+    ],
+    'messages' => [
+        'snippet_not_writeable'   => 'Сниппет в режиме только для чтения',
+        'directory_not_writeable' => 'Директория [:dir] не доступна для записи',
+        'not_found'               => 'Layout not found',
+        'deleted'                 => 'Снипет [:name] удален',
+        'updated'                 => 'Снипет [:name] обновлен',
+        'created'                 => 'Снипет создан',
+        'empty'                   => 'У вас нет сниппетов',
+    ],
 ];

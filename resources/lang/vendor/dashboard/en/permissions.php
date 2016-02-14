@@ -1,7 +1,7 @@
 <?php
 
 return [
-	'title' => 'Desktop',
-	'backend.dashboard' => 'Access',
-	'backend.dashboard.manage' => 'Setting widgets'
+    'title'                    => 'Dashboard',
+    'backend.dashboard'        => 'Dashboard (backend)',
+    'backend.dashboard.manage' => 'Dashboard Manage (backend)',
 ];

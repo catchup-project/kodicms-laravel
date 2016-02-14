@@ -1,19 +1,19 @@
 <?php
 
 return [
-	'title' => [
-		'api' => 'API',
-		'api_key' => 'API key application',
-		'api_keys' => 'Keys third-party applications',
-	],
-	'buttons' => [
-		'refresh_key' => 'Refresh key',
-	],
-	'messages' => [
-		'new_key' => 'Enter the key description',
-		'missing_params' => 'Do not passed mandatory parameter ":field"',
-		'error_permissions' => 'You are not authorized to perform the request',
-		'system_api_remove' => 'You can not delete the application API key',
-		'are_you_sure' => 'Are you sure you want to upgrade your API key?',
-	]
+    'title'    => [
+        'api'      => 'API',
+        'api_key'  => 'API Keys',
+        'api_keys' => 'API Keyss',
+    ],
+    'buttons'  => [
+        'refresh_key' => 'Refresh Key',
+    ],
+    'messages' => [
+        'new_key'           => 'New Key Description',
+        'missing_params'    => 'Missing parameters ":field"',
+        'error_permissions' => 'Error Permissions',
+        'system_api_remove' => 'System API Key Remove',
+        'are_you_sure'      => 'Are you sure (key)?',
+    ],
 ];

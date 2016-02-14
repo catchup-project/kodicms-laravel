@@ -19,7 +19,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     public function __construct(Application $app, Encrypter $encrypter)
     {
-        // TODO: добавить возможность, чтобы модули сами могли добавлять исключения
+        // TODO: добавить возможность, чтобы модули сами могли добавлять исKeyения
         $this->except[] = 'api.filemanager';
 
         parent::__construct($app, $encrypter);

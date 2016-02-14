@@ -2,21 +2,21 @@
 
 return [
     'title'    => [
-        'list'   => 'Роли',
+        'list'   => 'Roles',
         'edit'   => 'Редактирование роли :name',
         'create' => 'Создание новой роли',
     ],
     'tab'      => [
-        'general'     => 'Основная информация',
+        'general'     => 'General',
         'permissions' => 'Права доступа',
     ],
     'field'    => [
-        'name'        => 'Название',
-        'description' => 'Описание',
-        'actions'     => 'Действия',
+        'name'        => 'fieldname',
+        'description' => 'Description',
+        'actions'     => 'actions',
     ],
     'button'   => [
-        'create'                 => 'Добавить роль',
+        'create'                 => 'Add Button роль',
         'select_all_permissions' => 'Выбрать все',
         'permissions'            => [
             'grant'  => 'Разрешено',

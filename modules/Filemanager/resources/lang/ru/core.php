@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'public' => 'Корень',
+    'public' => 'Public',
     'title'  => [
-        'index' => 'Файловый менеджер',
+        'index' => 'Filemanager Index',
     ],
 ];

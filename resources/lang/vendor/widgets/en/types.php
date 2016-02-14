@@ -1,18 +1,18 @@
 <?php
 
 return [
-	'html' => 'HTML',
-	'handler' => 'Handler',
-	'paginator' => [
-		'title' => 'Pagination',
-		'label' => [
-			'settings' => 'Options list',
-		],
-		'setting' => [
-			'list_offset' => 'Number of skipped documents',
-			'list_size' => 'Max document page',
-			'linked_widget_id' => 'Widget',
-			'query_key' => 'Key [$_GET]',
-		]
-	]
+    'html'      => 'HTML',
+    'handler'   => 'Обработчик',
+    'paginator' => [
+        'title'   => 'Постраничная навигация',
+        'label'   => [
+            'settings' => 'Settings списка',
+        ],
+        'setting' => [
+            'list_offset'      => 'Кол-во пропускаемых документов',
+            'list_size'        => 'Кол-во документов на странице',
+            'linked_widget_id' => 'Виджет',
+            'query_key'        => 'Key [$_GET]',
+        ],
+    ],
 ];
